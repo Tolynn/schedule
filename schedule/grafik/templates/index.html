@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <h1>List workers:</h1>
+
+    {% for worker in workers %}
+
+        <li>{{worker}}</li>
+
+    {% endfor %}
+
+
+{% endblock %}
+

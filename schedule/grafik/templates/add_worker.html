@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+<h1>add worker</h1>
+{% block body %}
+    <form action="{% url 'grafik:add_worker' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit">
+    </form>
+    <h1>List workers:</h1>
+
+    {% for worker in workers %}
+
+        <li>{{worker}}</li>
+
+    {% endfor %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form2 }}
+        <input type="submit">
+    </form>
+{% endblock %}
